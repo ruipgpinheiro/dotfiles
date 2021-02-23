@@ -22,6 +22,7 @@ alias ll.='ls. -l'
 alias la="ls -A"
 alias lla="ll -A"
 
+
 #######
 # LS_COLORS
-eval `dircolors --sh $ZSH_DIRCOLORS_PATH`
+[[ ! -z "$ZSH_DIRCOLORS_PATH" ]] && eval `dircolors --sh $ZSH_DIRCOLORS_PATH`

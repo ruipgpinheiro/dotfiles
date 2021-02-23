@@ -25,6 +25,11 @@ typeset -g ZSH_EXCLUDE_DOTFILE_ALIASES=("applications")
 
 
 ########################
+# Autocomplete
+typeset -g ZSH_COMPINIT_INSECURE=0
+
+
+########################
 # Zplug
 typeset -g ZPLUG_ROOT="$HOME/.zplug"
 

@@ -86,7 +86,12 @@ function init_completion {
 	# Initialize completion
 	fpath=(~zsh/completion $fpath)
 	autoload -U compinit
-	compinit #-C -i
+
+	if is_true "$ZSH_COMPINIT_INSECURE" ; then
+		compinit
+	else
+		compinit -C -i
+	fi
 
 	####################
 	# Disable ~<user> directory autocompletion as it's slow in systems with a lot of users
